@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back2"
+                tools:context="trying.des.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+        <TextView
+            android:id="@+id/dist_val"
+            android:layout_marginTop="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_horizontal"
+            android:keepScreenOn="true"
+            android:text="0.00"
+            android:textColor="#fff"
+            android:textSize="100sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/dis_unit"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/dist_val"
+            android:text="KELOMETERS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:id="@+id/stat"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/dis_unit"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/timer_ico"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/time2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:id="@+id/ty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="00:00"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/timer_ico"
+                android:layout_toEndOf="@+id/timer_ico"
+                android:layout_marginLeft="21dp"
+                android:layout_marginStart="15dp"/>
+            <ImageView
+                android:id="@+id/speed_ico"
+                android:src="@drawable/speed"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/speed"
+                android:layout_toStartOf="@+id/speed"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="21dp"/>
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="00,0"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"/>
+        </RelativeLayout>
+        <Button
+            android:onClick="pause"
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="PAUSE"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:layout_below="@+id/stat"
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avril Lavigne - Wish you were here"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_above="@+id/music"
+            />
+        <LinearLayout
+            android:id="@+id/music"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight=".6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/previous"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:src="@drawable/ic_skip_previous_white_24dp"/>
+            <ImageButton
+                android:id="@+id/start"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_pause_circle_filled_black_24dp"/>
+
+            <ImageButton
+                android:id="@+id/next"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/ic_skip_next_white_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

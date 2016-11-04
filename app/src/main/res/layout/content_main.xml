@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="trying.des.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <TextView
+
+                android:id="@+id/Allsteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="4324"
+                android:textColor="#009688"
+                android:textSize="70dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Allsteps"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/Allsteps"
+                android:text="Steps"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight=".1"
+
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/left"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/center">
+
+                <ImageView
+                    android:id="@+id/time_ico"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="3dip"
+                    android:src="@drawable/time"/>
+
+                <TextView
+                    android:id="@+id/time_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="3dip"
+                    android:text="34443"
+                    android:textColor="#000"
+                    android:textSize="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/time_ico"
+                    android:layout_below="@+id/time_num"
+                    android:padding="3dip"
+                    android:text="Minutes"
+                    android:textSize="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/cal_ico"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="3dip"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/calories_icon"/>
+
+                <TextView
+                    android:id="@+id/cal_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="3dip"
+                    android:text="50"
+                    android:textColor="#000"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/cal_ico"
+                    android:layout_alignRight="@+id/cal_ico"
+                    android:layout_below="@+id/cal_num"
+                    android:padding="3dip"
+                    android:text="Calories"
+                    android:textSize="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/center">
+
+                <ImageView
+                    android:id="@+id/dis_ico"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="3dip"
+                    android:src="@drawable/loc"/>
+
+                <TextView
+                    android:id="@+id/dis_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="3dip"
+                    android:text="34"
+                    android:textColor="#000"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/dis_ico"
+                    android:layout_below="@+id/dis_num"
+                    android:padding="3dip"
+                    android:text="Meters"
+                    android:textSize="10dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#000000"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:onClick="start"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Begin run"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:gravity="center_horizontal"
+            android:text="History"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+
+        <ListView
+
+            android:id="@+id/lis"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:dividerHeight="10dip"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="false"
+            />
+
+        <TextView
+            android:id="@+id/tt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click Begin run or add button"
+            android:textColor="#a69b9b"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

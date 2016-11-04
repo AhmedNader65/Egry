@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:weightSum="7"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/numHis"
+            android:layout_weight=".4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1-"
+            />
+    <TextView
+        android:id="@+id/dateHis"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="14/5/2016"
+        />
+    <TextView
+        android:id="@+id/timeHis"
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="45 min"
+        />
+    <TextView
+        android:id="@+id/disHis"
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1.3 KM"
+        />
+
+</LinearLayout>
